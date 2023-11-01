@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index</h1>
+    
+    {% for post in posts %}
+    <label for="title">title</label>
+    <p>{{post.title}}</p>
+    <label for="content">content</label>
+    <p>{{post.content}}</p>
+    <a href="/posts/{{post.id}}">detail</a>
+    <a href="/posts/{{post.id}}/delete">delete</a>
+    <hr>
+    {% endfor %}
+
+    <a href="/posts/new/">new</a>
+</body>
+</html>
